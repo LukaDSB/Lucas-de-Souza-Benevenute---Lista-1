@@ -1,4 +1,5 @@
-#include <stdio.h>
+//Este é o mesmo código do exercício 9, atende aos 2 casos
+#include<stdio.h>
 #include<stdlib.h>
 
 int primo(int num) {
@@ -19,8 +20,10 @@ int num;
     printf("Informe o numero: ");
     scanf("%d", &num); system("cls");
     
-    if(primo(num))
-        printf("O numero informado e primo!");
-    else
-        printf("O numero informado nao e primo!");
+    printf("----- -Numeros primos ate %d ------\n\n", num);
+    for (int i = 2; i <= num; i++) {
+        if (primo(i))
+            printf("%d ", i);
+    }
+    printf("\n");
 }

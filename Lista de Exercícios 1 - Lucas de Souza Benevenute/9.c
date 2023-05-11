@@ -19,8 +19,9 @@ int num;
     printf("Informe o numero: ");
     scanf("%d", &num); system("cls");
     
-    if(primo(num))
-        printf("O numero informado e primo!");
-    else
-        printf("O numero informado nao e primo!");
+    printf("------Numeros primos ate %d------\n\n", num);
+    for (int i = 2; i <= num; i++) {
+        if (primo(i))
+            printf("%d ", i);
+    }
 }
